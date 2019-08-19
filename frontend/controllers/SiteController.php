@@ -1,6 +1,7 @@
 <?php
 namespace frontend\controllers;
 
+
 use common\models\LoginForm;
 use frontend\models\ContactForm;
 use frontend\models\PasswordResetRequestForm;
@@ -10,63 +11,43 @@ use frontend\models\SignupForm;
 use frontend\models\VerifyEmailForm;
 use Yii;
 use yii\base\InvalidArgumentException;
-use yii\filters\AccessControl;
-use yii\filters\VerbFilter;
+use yii\helpers\ArrayHelper;
 use yii\web\BadRequestHttpException;
-use yii\web\Controller;
 
 /**
  * Site controller
  */
-class SiteController extends Controller
+class SiteController extends BaseFrontendController
 {
     /**
-     * {@inheritdoc}
+     * @inheritdoc
      */
     public function behaviors()
     {
-        return [
-            'access' => [
-                'class' => AccessControl::className(),
-                'only' => ['logout', 'signup'],
-                'rules' => [
-                    [
-                        'actions' => ['signup'],
-                        'allow' => true,
-                        'roles' => ['?'],
-                    ],
-                    [
-                        'actions' => ['logout'],
-                        'allow' => true,
-                        'roles' => ['@'],
-                    ],
-                ],
-            ],
-            'verbs' => [
-                'class' => VerbFilter::className(),
-                'actions' => [
-                    'logout' => ['post'],
-                ],
-            ],
-        ];
+        //I use array_merge() because ParentController extends from another custom controller.
+        return ArrayHelper::merge(
+            parent::behaviors(),
+            [
+            
+            ]
+        );
     }
-
     /**
      * {@inheritdoc}
      */
     public function actions()
     {
-        return [
-            'error' => [
-                'class' => 'yii\web\ErrorAction',
-            ],
-            'captcha' => [
-                'class' => 'yii\captcha\CaptchaAction',
-                'fixedVerifyCode' => YII_ENV_TEST ? 'testme' : null,
-            ],
-        ];
+        return ArrayHelper::merge(
+            parent::actions(),
+            [
+                'captcha' => [
+                    'class' => 'yii\captcha\CaptchaAction',
+                    'fixedVerifyCode' => YII_ENV_TEST ? 'testme' : null,
+                ],
+            ]
+        );
     }
-
+    
     /**
      * Displays homepage.
      *
