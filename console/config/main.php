@@ -35,6 +35,7 @@ return [
             'showScriptName' => false,
             'rules' => include_once '_urlManager.php',
         ],
+        'db'    => require(__DIR__ . '/../../common/config/db' . (YII_ENV == 'dev' ? '.dev' : '') . '.php'),
     ],
     'params' => $params,
 ];

@@ -7,7 +7,7 @@
     use yii\bootstrap\ActiveForm;
     use yii\helpers\Html;
     
-    $this->title = 'Login';
+    $this->title = 'Login2';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="site-login">
