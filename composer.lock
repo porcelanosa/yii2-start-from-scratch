@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "24c6c48443867494c303d1839f051f3c",
+    "content-hash": "5e828802d4c261bb97204f6025bba3fd",
     "packages": [
         {
             "name": "bower-asset/bootstrap",
@@ -161,6 +161,45 @@
                 "markdown-extra"
             ],
             "time": "2018-03-26T11:24:36+00:00"
+        },
+        {
+            "name": "coreui/coreui",
+            "version": "v2.1.12",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/coreui/coreui.git",
+                "reference": "97d3bbde24bb554f77d32583717737789e8c21d0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/coreui/coreui/zipball/97d3bbde24bb554f77d32583717737789e8c21d0",
+                "reference": "97d3bbde24bb554f77d32583717737789e8c21d0",
+                "shasum": ""
+            },
+            "type": "library",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Łukasz Holeczek",
+                    "email": "lukasz@coreui.io"
+                }
+            ],
+            "description": "Open Source UI Kit built on top of Bootstrap 4",
+            "homepage": "https://coreui.io",
+            "keywords": [
+                "JS",
+                "css",
+                "framework",
+                "front-end",
+                "mobile-first",
+                "responsive",
+                "sass",
+                "web"
+            ],
+            "time": "2019-06-12T13:19:56+00:00"
         },
         {
             "name": "dektrium/yii2-rbac",

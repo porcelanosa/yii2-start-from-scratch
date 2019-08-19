@@ -7,18 +7,17 @@ use yii\web\AssetBundle;
 /**
  * Main backend application asset bundle.
  */
-class AppAsset extends AssetBundle
+class CoreuiAsset extends AssetBundle
 {
-    public $basePath = '@webroot';
-    public $baseUrl = '@web';
+    public $basePath = '@vendor/coreui/coreui/dist/';
+    public $baseUrl = '/vendor/coreui/coreui/dist/';
     public $css = [
-        'css/site.css',
+        'css/coreui.min.css',
     ];
     public $js = [
+        'js/coreui.min.js'
     ];
     public $depends = [
-        'yii\web\YiiAsset',
         'yii\bootstrap4\BootstrapAsset',
-        'backend\assets\CoreuiAsset'
     ];
 }
