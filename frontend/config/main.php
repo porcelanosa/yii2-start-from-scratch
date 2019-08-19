@@ -42,7 +42,6 @@ return [
             'showScriptName' => false,
             'rules' => include_once '_urlManager.php',
         ],
-
     ],
     'params' => $params,
 ];
